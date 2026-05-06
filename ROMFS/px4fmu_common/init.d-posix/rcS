@@ -359,6 +359,8 @@ fi
 # execute autostart post script if any
 [ -e "$autostart_file".post ] && . "$autostart_file".post
 
+#disble gcs failure
+param set NAV_DLL_ACT 0
 # Run script to start logging
 if param compare -s EKF2_EN 1
 then
